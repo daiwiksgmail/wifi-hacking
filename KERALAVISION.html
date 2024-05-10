@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Protected Page</title>
+
+<style>
+    /* Some basic styling for demonstration */
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+    input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+    #message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: red;
+    }
+</style>
+</head>
+<body">
+
+<h2>Enter the Password</h2>
+
+<input type="password" id="passwordInput" placeholder="KERALAVISION">
+<button onclick="checkPassword()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+    function checkPassword() {
+        var password = document.getElementById("passwordInput").value;
+
+        // Replace 'yourpassword' with your actual password
+        if (password === "pwd") {
+            document.getElementById("message").innerHTML = "PASSWORD.ethical hacking";
+            // You can display or do whatever you want after the correct password is entered.
+        } else {
+            document.getElementById("message").innerHTML = "Incorrect password. Please try again.";
+        }
+    }
+</script>
+
+</body>
+</html>

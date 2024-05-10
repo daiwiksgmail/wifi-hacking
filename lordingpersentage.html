@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        #wifi-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .wifi-network {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 0.5s ease forwards; /* Fade in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>WiFi Networks</h1>
+    <ul id="wifi-list">
+        <!-- WiFi networks will be dynamically added here -->
+    </ul>
+</div>
+
+<script>
+    // Dummy data for WiFi networks (replace with actual data)
+    var wifiNetworks = [
+   { name:"Galaxy S22 ultra 8044", strength: "Strong"},
+ { name: "Vivo y27", strength: "Strong" },
+        { name: "Huawei nova 3e", strength: "Medium" },
+        { name: "KERALAVISION", strength: "Weak" }
+    ];
+
+    // Function to display WiFi networks
+    function displayWifiNetworks() {
+        var wifiList = document.getElementById("wifi-list");
+        wifiList.innerHTML = ""; // Clear previous content
+
+        wifiNetworks.forEach(function(network) {
+            var listItem = document.createElement("li");
+            listItem.classList.add("wifi-network");
+            listItem.textContent = network.name + " (" + network.strength + ")";
+            wifiList.appendChild(listItem);
+        });
+    }
+
+    // Call the function to display WiFi networks when the page loads
+    window.onload = function() {
+        displayWifiNetworks();
+        animateWifiNetworks();
+    };
+
+    // Function to animate WiFi networks
+    function animateWifiNetworks() {
+        var wifiItems = document.querySelectorAll(".wifi-network");
+        wifiItems.forEach(function(item, index) {
+            setTimeout(function() {
+                item.style.animationDelay = index * 0.9 + "s";
+            }, 100);
+        });
+    }
+</script>
+<ul>
+<li><a href="Galaxy S22 ultra 8044.html"><input type=submit value=PASSWORD=Galaxy S22 ultra 8044 ></a></li>
+<li><a href="Vivo y27.html"><input type=submit value=PASSWORD=Vivo y27 ></a></li>
+<li><a href="Huawei nova 3e .html"><input type=submit value=PASSWORD=Huawei nova 3e ></a></li>
+<li><a href="KERALAVISION.html"><input type=submit value=PASSWORD=KERALAVISION></a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WiFi Detector</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  .wifi-container {
+    margin-top: 50px;
+  }
+  .wifi-bar {
+    width: 300px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .wifi-strength {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    animation: wifiAnimation 6s infinite;
+  }
+  @keyframes wifiAnimation {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+  .wifi-name {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<h1>WiFi Detector</h1>
+<div class="wifi-container">
+  <div class="wifi-bar">
+    <div class="wifi-strength"></div>
+  </div>
+  <div class="wifi-name">Scanning for WiFi networks...</div>
+</div>
+<a href=lordingpersentage.html><input type=submit value=WIFI INFORMATION ></a>
+</body>
+</html>
